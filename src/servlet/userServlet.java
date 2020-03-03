@@ -37,9 +37,9 @@ public class userServlet extends HttpServlet {
 		String name=req.getParameter("name");
 		//需要对年龄进行转换,用到包装类
 		int age=Integer.parseInt(req.getParameter("age"));
-		user.setName("张三");
+		user.setName(name);
 		//调用实体类中setter方法为私有属性赋值
-		user.setAge(20);
+		user.setAge(age);
 		us.save(user);
 	}
 	
